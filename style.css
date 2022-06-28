@@ -1,0 +1,294 @@
+:root{
+  --dark-primary-color:#333;
+  --light-primary-color:#f8f8f8;
+  --screen-color:#a7af7c;
+  --screen-light-color:#bebebe;
+  --clear-color:#f00000;
+  --clear-deep-color:#d20000;
+  --equal-color:#2196f3;
+  --equal-deep-color:#1479c9;
+  --delete-color:#08979c;
+  --delete-deep-color:#006d75;
+  --transition-color:#ffffff5c;
+
+  --span-size:100px;
+  --gap-size:calc(var(--span-size) / 3);
+  --dark-calculator-background-shadow:
+  25px 25px 75px rgba(0,0,0,0.25),
+  10px 10px 70px rgba(0,0,0,0.12),
+  inset -5px -5px 15px rgba(0,0,0,0.5),
+  inset 5px 5px 15px rgba(0,0,0,0.5);
+  --light-calculator-background-shadow:
+  25px 25px 75px rgba(0,0,0,0.15),
+  10px 10px 70px rgba(0,0,0,0.15),
+  inset -5px -5px 15px rgba(0,0,0,0.15),
+  inset 5px 5px 15px rgba(0,0,0,0.05);
+
+  --light-text-shadow:1px 1px 2px #fff;
+  --dark-text-shadow:1px 1px 2px #000;
+
+  --text-area-with:calc(var(--span-size) * 4 + var(--gap-size) * 3);
+  --text-area-screen-shadow:
+    inset 2px 2px 10px var(--screen-light-color),
+    inset -2px -2px 10px #fff;
+
+  --light-span-color:rgb(250,250,250);
+  --light-span-deep-color:rgb(244,244,244);
+  --light-span-background:var(--light-span-color);
+  --light-span-background-linear:linear-gradient(var(--light-span-color),var(--light-span-deep-color));
+  --light-span-shadow:
+    inset -8px 0 8px rgba(0,0,0,0.15),
+    inset 0 -8px 8px rgba(0,0,0,0.25),
+    0 0 10px 4px rgba(0,0,0,0.5),
+    10px 20px 25px rgba(0,0,0,0.4);
+
+  --dark-span-color:rgb(63,63,63);
+  --dark-span-deep-color:rgb(47,47,47);
+  --dark-span-background:var(--dark-span-color);
+  --dark-span-background-linear:linear-gradient(var(--dark-span-color),var(--dark-span-deep-color));
+  --dark-span-shadow:
+    inset -8px 0 8px rgba(0,0,0,0.15),
+    inset 0 -8px 8px rgba(0,0,0,0.25),
+    0 0 10px 4px rgba(0,0,0,0.5),
+    10px 20px 25px rgba(0,0,0,0.4);
+
+  --image-size:80px;
+  --light-image-shadow:
+    2px 2px 4px #fff,
+    inset 2px 2px 4px rgba(0,0,0,0.15);
+  --light-image-active-shdow:
+    2px 2px 4px rgba(0,0,0,0.15),
+    inset 2px 2px 4px rgba(255,255,255,0.15);
+  --dark-image-shadow:
+    2px 2px 4px rgba(0,0,0,0.15),
+    -1px -1px 6px rgba(0,0,0,0.15);
+  --dark-image-active-shadow:
+    2px 2px 4px #fff,
+    inset 2px 2px 4px rgba(0,0,0,0.15);
+  --span-mousedown-shadow:
+    inset -8px 0 8px rgba(0,0,0,0.15),
+    inset 0 -8px 8px rgba(0,0,0,0.15),
+    0px 0px 10px 5px rgba(0,0,0,0.5);
+
+  --dark-span-before-border:1px solid var(var(--dark-primary-color));
+  --dark-span-before-deep-background:rgba(45,45,45);
+  --dark-span-before-background:rgb(77,77,77);
+  --dark-span-before-background-linear:
+    linear-gradient(90deg,var(--dark-span-before-deep-background),var(--dark-span-before-background));
+  --dark-span-before-box-shadow:
+    -5px -5px 15px rgba(0,0,0,0.1),
+    -1px -1px 5px 0.5px rgba(255,255,255,0.05),
+    10px 5px 10px rgba(0,0,0,0.15);
+
+  --light-span-before-border:1px solid var(--light-primary-color);
+  --light-span-before-deep-background:rgb(230,230,230);
+  --light-span-before-background:rgb(239,239,239);
+  --light-span-before-background-linear:
+    linear-grandient(90deg,var(--light-span-before-deep-background),var(--light-span-before-background));
+  --light-span-before-box-shadow:
+    -10px -10px 10px rgba(255,255,255,0.25),
+    10px 5px 10px grab(0,0,0,0.15);
+
+  --clear-before-background-linear:linear-gradient(120deg,var(--clear-color),var(--transition-color));
+  --delete-before-background-linear:linear-gradient(120deg,var(--delete-color),var(--transition-color));
+  --equal-before-background-linear:linear-gradient(120deg,var(--equal-color),var(--transition-color));
+
+  --column-gap-size:var(--gap-size);
+  --row-gap-size:calc(var(--gap-size) * 4 / 5);
+  --dark-calculator-background-shadow:
+  25px 25px 75px rgba(0,0,0,0.25),
+  10px 10px 70px rgba(0,0,0,0.25),
+  inset -5px -5px 15px rgba(0,0,0,0.5),
+  inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+
+*,*::before,*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+  font-family:monospace;
+  color:var(--dark-primary-color);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+
+  text-decoration: none;
+  list-style:none;
+  text-align: center;
+  user-select:none;
+  -webkit-user-drag: none;
+}
+
+html,body{
+  width:100vw;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:var(--dark-primary-color);
+}
+
+.calculator{
+  position: relative;
+  max-width:1200px;
+  min-width:300px;
+  min-height:400px;
+  display: grid;
+  grid-template-columns:repeat(1,4fr);
+  grid-template-rows: 120px  repeat(5,1fr);
+  column-gap:var(--column-gap-size);
+  row-gap:var(--row-gap-size);
+
+  padding:60px;
+  border-radius:20px;
+  box-shadow: var(--dark-calculator-background-shadow);
+  text-shadow:var(--dark-text-shadow);
+}
+
+.toggle{
+  position: absolute;
+  top:0;
+  right:0;
+  display:grid;
+  place-items:center;
+}
+
+.toggle img{
+  position: relative;
+  width:var(--image-size);
+  height:var(--image-size);
+  top:calc(var(--image-size) /2);
+  right:calc(var(--image-size) /2);
+
+  padding:10px;
+  border-radius:5px;
+}
+
+.toggle img:nth-child(1){
+  display:block;
+  filter:invert(1);
+  box-shadow: var(--light-image-shadow);
+}
+
+.toggle img:nth-child(1):active{
+  box-shadow: var(--light-image-shadow);
+}
+
+.toggle img:nth-child(2){
+   display:none;
+   box-shadow: var(--dark-image-shadow);
+}
+
+.toggle img:nth-child(2):active{
+  box-shadow: var(--dark-image-active-shadow);
+}
+
+#textarea{
+  position: relative;
+  width:var(--text-area-with);
+
+  grid-column:span 4;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  border:none;
+  border-radius: 10px;
+  background:var(--screen-color);
+  box-shadow:var(--text-area-screen-shadow);
+}
+
+#textarea input{
+  position:absolute;
+  width:100%;
+  padding:0 10px;
+  background:none;
+  border:none;
+  font-family: 'Chakra';
+  font-size:3rem;
+  line-height:1em;
+  text-align:right;
+  outline:none;
+
+}
+
+#textarea input:nth-child(1){
+  opacity:0;
+  display:none;
+}
+
+
+.calculator span{
+  position:relative;
+  width:var(--span-size);
+  height:var(--span-size);
+  display:grid;
+  place-items: center;
+
+  background:var(--dark-span-background-linear);
+  box-shadow: var(--dark-span-shadow);
+
+  /* border:1px solid #fff; */
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.calculator span.mousedown{
+  transform:translateY(3px);
+  box-shadow: var(--span-mousedown-shadow);
+}
+
+.calculator span#clear{
+  grid-column: span 2;
+  width:100%;
+  background:var(--clear-deep-color);
+}
+
+.calculator span#plus{
+  grid-row:span 2;
+  height:100%;
+}
+
+.calculator span#delete{
+  background:var(--delete-deep-color)
+
+}
+
+.calculator span#equal{
+  background:var(--equal-deep-color)
+}
+
+.calculator span::before{
+  position: absolute;
+  top:6px;
+  left:6px;
+  bottom:10px;
+  right:12px;
+  display:grid;
+  place-items:center;
+  background:var(--dark-span-before-background-linear);
+  color:var(--light-primary-color);
+  font-size:2rem;
+  text-transform: uppercase;
+  border-top:var(--dark-span-before-border);
+  border-bottom:var(--dark-span-before-border);
+  border-left:var(--dark-span-before-border);
+  box-shadow: var(--dark-span-before-box-shadow);
+  border-radius: 10px;
+  content:''
+}
+
+.calculator span#clear::before{
+  background:var(--clear-before-background-linear);
+  border:none;
+}
+
+.calculator span#delete::before{
+  background:var(--delete-before-background-linear);
+  border:none;
+}
+
+.calculator span#equal::before{
+  background:var(--equal-before-background-linear);
+  border:none;
+}
